@@ -1,0 +1,22 @@
+﻿@{
+    var area = this.GetType().Assembly.FullName;
+}
+
+<!DOCTYPE html>
+<head>
+    <title>@ViewData["Title"] - RazorClassLibrary1</title>
+    <link rel="stylesheet" href="~/site.css?area=@area" />
+</head>
+<body>
+    <h1>RazorClassLibrary1/Shared/_Layout.cshtml</h1>
+    @RenderBody()
+    <pre>
+    <a asp-controller="Home" asp-action="Index">Home</a>
+    <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <a asp-page="/Test">Page/Test</a>
+    <a href="~/Home/Index?pluginId=1">RazorClassLibrary1/Home?pluginId=...</a>
+    <a asp-area="@area" asp-controller="Home" asp-action="Index">RazorClassLibrary1/Home?area=...</a>
+    <a asp-area="@area" asp-page="/Test">RazorClassLibrary1/Page/Test?area=...</a>
+    </pre>
+</body>
+</html>

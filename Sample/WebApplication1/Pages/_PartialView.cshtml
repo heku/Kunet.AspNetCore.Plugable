@@ -1,0 +1,11 @@
+﻿@model string
+
+<h1>
+    WebApplication1/Pages/_PartialView.cshtml
+</h1>
+<pre>
+    @Model
+</pre>
+<code>
+    @Json.Serialize(Context.GetRouteData())
+</code>
